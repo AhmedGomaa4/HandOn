@@ -16,14 +16,7 @@ WITH noNull AS (SELECT COALESCE(rmsk, '0') AS rmsk FROM Tst WHERE rmsk like '%RS
 				FROM t3
 				GROUP BY storeID)
 
-select *, case when exist_INV = diff then ' Successfull' else 'Error' end as integration_status from t4
---ORDER BY the_1st_Inv
-
-
-------------------------------------------------------
-
---SELECT * FROM t2 WHERE storeid like '1084'
---		SELECT * FROM t2 WHERE storeid like '1084'
-
---SELECT * FROM tst WHERE rmsk like '2024%'
---ORDER BY Ref__
+select *,
+		case when exist_INV = diff then ' Successfull' else 'Error' end as integration_status
+from t4
+order by 6
