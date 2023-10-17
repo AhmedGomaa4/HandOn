@@ -269,10 +269,7 @@ Columns(sd.item("accountnumber")).Cut:              Range("BR1").Select:      Ac
     Range("H:N").Group
     Range("BK:BR").Group
     
-    
-    
-     '''''''''''''' STOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOPPED HERE
-    
+        
 '''' Filter with SalesW-Cost
 '   Fill Columns from Brand to Category with Outlet
 
