@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,77 +9,88 @@
 
 <style>
 
-body{
+*{
     margin:0;
-    font-family:Arial;
-    background:#0b1220;
-    color:#e5e7eb;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* HEADER */
+body{
+    font-family:Segoe UI, Arial, sans-serif;
+    background:#0f172a;
+    color:#e2e8f0;
+    line-height:1.6;
+}
+
 header{
     text-align:center;
-    padding:70px 20px;
-    background:linear-gradient(135deg,#111827,#0b1220);
+    padding:80px 20px;
+    background:linear-gradient(135deg,#111827,#0f172a);
 }
 
 header h1{
-    font-size:40px;
-    margin:0;
+    font-size:48px;
+    margin-bottom:10px;
 }
 
 header p{
     color:#94a3b8;
-    margin-top:10px;
+    font-size:18px;
 }
 
-/* SECTION */
 section{
-    max-width:1100px;
+    max-width:1200px;
     margin:auto;
-    padding:50px 20px;
+    padding:60px 20px;
 }
 
 h2{
     color:#38bdf8;
-    margin-bottom:20px;
+    margin-bottom:25px;
+    font-size:32px;
 }
 
-/* ABOUT */
 .about{
+    font-size:18px;
     color:#cbd5e1;
-    line-height:1.6;
 }
 
-/* SKILLS */
 .skills{
     display:flex;
     flex-wrap:wrap;
-    gap:10px;
+    gap:12px;
 }
 
 .skill{
-    background:#1f2937;
-    padding:8px 14px;
+    background:#1e293b;
+    padding:10px 16px;
     border-radius:8px;
-    font-size:14px;
+    border:1px solid #334155;
 }
 
-/* PROJECT GRID */
+.powerbi-box{
+    background:#111827;
+    padding:20px;
+    border-radius:15px;
+    border:1px solid #334155;
+}
+
+iframe{
+    border-radius:10px;
+}
+
 .projects{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:20px;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
 }
 
-/* CARD */
 .card{
     background:#111827;
-    border-radius:12px;
+    border-radius:15px;
     overflow:hidden;
-    transition:0.3s;
-    cursor:pointer;
-    border:1px solid #1f2937;
+    transition:.3s;
+    border:1px solid #334155;
 }
 
 .card:hover{
@@ -86,119 +98,233 @@ h2{
     border-color:#38bdf8;
 }
 
-/* IMAGE */
 .card img{
     width:100%;
-    height:180px;
+    height:220px;
     object-fit:cover;
+    cursor:pointer;
 }
 
-/* CONTENT */
 .content{
-    padding:15px;
+    padding:20px;
 }
 
 .content h3{
-    margin:0;
-    font-size:16px;
+    margin-bottom:10px;
 }
 
 .content p{
-    font-size:13px;
     color:#94a3b8;
 }
 
-/* CONTACT */
 .contact{
     text-align:center;
 }
 
-a{
+.contact a{
     color:#38bdf8;
     text-decoration:none;
 }
 
 footer{
     text-align:center;
-    padding:20px;
-    color:#64748b;
-    font-size:13px;
-    border-top:1px solid #1f2937;
+    padding:30px;
+    border-top:1px solid #334155;
+    color:#94a3b8;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.95);
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    cursor:pointer;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:95%;
+    border-radius:10px;
+}
+
+@media(max-width:768px){
+
+header h1{
+    font-size:34px;
+}
+
+h2{
+    font-size:26px;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
 <header>
     <h1>Ahmed Gomaa</h1>
-    <p>Data Analyst | Power BI | SQL | Excel | FP&A</p>
+    <p>Data Analyst | Power BI Developer | FP&A Specialist</p>
 </header>
 
 <section>
     <h2>About Me</h2>
+
     <p class="about">
-        Data Analyst with strong experience in Power BI, Excel, SQL and financial analysis.
-        I build dashboards, automate reports and support business decision-making with data insights.
+        Data Analyst with strong experience in Power BI, Excel, SQL, Python,
+        Power Query, DAX, Cost Accounting and Financial Planning & Analysis.
+        Passionate about transforming raw data into meaningful insights and
+        building dashboards that support strategic business decisions.
     </p>
 </section>
 
 <section>
+
     <h2>Skills</h2>
+
     <div class="skills">
         <div class="skill">Power BI</div>
+        <div class="skill">DAX</div>
+        <div class="skill">Power Query</div>
         <div class="skill">Excel</div>
         <div class="skill">SQL</div>
         <div class="skill">Python</div>
-        <div class="skill">DAX</div>
-        <div class="skill">Power Query</div>
         <div class="skill">Financial Analysis</div>
+        <div class="skill">FP&A</div>
+        <div class="skill">Cost Accounting</div>
+        <div class="skill">Data Modeling</div>
     </div>
+
 </section>
 
 <section>
-    <h2>Projects</h2>
+
+    <h2>Featured Power BI Dashboard</h2>
+
+    <div class="powerbi-box">
+
+        <iframe
+        title="Power BI Dashboard"
+        width="100%"
+        height="700"
+        src="https://app.powerbi.com/view?r=eyJrIjoiOTAxMmNkNDYtYzIwNy00NmQzLWI4N2YtNDE1M2ZhZTE2MTAwIiwidCI6ImJkODcxZGU1LTk3YTYtNGUzYy1hODZkLWIyMDQzY2ExYzA3OCJ9"
+        frameborder="0"
+        allowfullscreen="true">
+        </iframe>
+
+    </div>
+
+</section>
+
+<section>
+
+    <h2>Project Gallery</h2>
 
     <div class="projects">
 
         <div class="card">
-            <img src="images/excel-dashboard-y2d.png">
+
+            <img
+            src="images/excel-dashboard-y2d.JPG"
+            onclick="openImage(this.src)">
+
             <div class="content">
-                <h3>Excel Y2D Dashboard</h3>
-                <p>Financial year-to-date performance dashboard built in Excel.</p>
+                <h3>Excel Dashboard YTD</h3>
+                <p>
+                    Executive dashboard designed in Excel to monitor business
+                    performance and key financial metrics.
+                </p>
             </div>
+
         </div>
 
         <div class="card">
-            <img src="images/ports-dashboard.png">
+
+            <img
+            src="images/ports-dashboard.png"
+            onclick="openImage(this.src)">
+
             <div class="content">
-                <h3>Ports Operations Dashboard</h3>
-                <p>Operational KPIs dashboard with performance insights.</p>
+                <h3>Ports Dashboard</h3>
+                <p>
+                    Interactive operational dashboard providing visibility into
+                    ports activities and performance indicators.
+                </p>
             </div>
+
         </div>
 
         <div class="card">
-            <img src="images/logistics-dashboard.png">
+
+            <img
+            src="images/logistics-dashboard.png"
+            onclick="openImage(this.src)">
+
             <div class="content">
                 <h3>Logistics Dashboard</h3>
-                <p>Logistics tracking dashboard with performance metrics.</p>
+                <p>
+                    Dashboard focused on logistics KPIs, shipment monitoring,
+                    and operational analytics.
+                </p>
             </div>
+
         </div>
 
     </div>
+
 </section>
 
 <section class="contact">
+
     <h2>Contact</h2>
+
     <p>Email: your-email@example.com</p>
-    <p>LinkedIn: linkedin.com/in/yourprofile</p>
+
+    <p>
+        GitHub:
+        <a href="https://github.com/AhmedGomaa4" target="_blank">
+            github.com/AhmedGomaa4
+        </a>
+    </p>
+
 </section>
 
 <footer>
     © 2026 Ahmed Gomaa | Data Analyst Portfolio
 </footer>
 
+<div id="lightbox" class="lightbox" onclick="closeImage()">
+    <img id="lightbox-img">
+</div>
+
+<script>
+
+function openImage(src){
+
+    document.getElementById("lightbox-img").src = src;
+
+    document.getElementById("lightbox").style.display = "flex";
+
+}
+
+function closeImage(){
+
+    document.getElementById("lightbox").style.display = "none";
+
+}
+
+</script>
+
 </body>
 </html>
+```
